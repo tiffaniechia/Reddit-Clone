@@ -1,10 +1,9 @@
-<%= link_to 'Add Post', new_post_path %>
-
-
 <% if @posts.any? %>
   <% @posts.each do |post| %>
-    <%= post.title %>
-    <%= post.comment %>
+    <div class="col-md-12">
+      <h3><%= post.title %></h3>
+      <%= post.comment %>
+    </div>
   <% end %>
 <% else %>
   No posts yet
