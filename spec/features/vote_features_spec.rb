@@ -27,4 +27,13 @@ end
     expect(page).to have_content('0 votes')
   end  
 
+  it 'only displays votes from the last week' do
+    visit '/posts'
+    click_button 'Upvote'
+    Timecop.freeze(Date.today + 8) do
+      visit '/posts'
+      expect(page).to have_content('0 votes')
+    end 
+  end
+
 end  
