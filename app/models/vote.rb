@@ -7,7 +7,7 @@ class Vote < ActiveRecord::Base
   after_create :send_email
 
   def send_email
-    VoteMailer.notification(post).deliver
+    VoteMailer.notification(self, post).deliver
   end
 
 end

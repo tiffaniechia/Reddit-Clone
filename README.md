@@ -28,3 +28,4 @@ Project to create a ruby on rails application including:
 * Capybara Mailer - tests
 * Launchy
 * Bootstrap SCSS
+* Mailcatcher

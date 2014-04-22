@@ -1,1 +1,5 @@
-<p>Your post got upvoted :D <%= @post.title %></p>
+<% if @vote.up? %>
+  <p>Your post got upvoted :D <%= @post.title %></p>
+<% else %>
+  <p>Your post got downvoted :( <%= @post.title %></p>
+<% end %>
