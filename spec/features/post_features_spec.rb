@@ -12,7 +12,7 @@ describe 'post index page' do
   context 'valid posts' do
 
     before(:each) do
-      post = Post.create(comment: 'some comment')
+      create(:post)
     end
 
     it 'displays comments' do

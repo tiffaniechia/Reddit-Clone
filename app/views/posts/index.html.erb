@@ -1,9 +1,11 @@
+<%= link_to 'Add Post', new_post_path %>
+
+
 <% if @posts.any? %>
   <% @posts.each do |post| %>
+    <%= post.title %>
     <%= post.comment %>
   <% end %>
 <% else %>
   No posts yet
 <% end %>
-
-<%= link_to 'Add Post', new_post_path %>

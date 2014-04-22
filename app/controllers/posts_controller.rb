@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
 
   def create  
-    @post = Post.new(params[:post].permit(:comment))
+    @post = Post.new(params[:post].permit(:title, :comment))
     if @post.save 
       redirect_to ('/posts')
     else
