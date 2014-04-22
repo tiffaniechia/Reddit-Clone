@@ -14,16 +14,16 @@ end
 
   it 'upvote' do 
     visit'/posts'
-    clink_link 'Upvote'
+    click_button 'Upvote'
     expect(page).to have_content('1 vote')
   end  
 
 
   it 'downvote' do 
     visit'/posts'
-    clink_link 'Upvote'
+    click_button'Upvote'
     expect(page).to have_content('1 vote')
-    clink_link 'Downvote'
+    click_button 'Downvote'
     expect(page).to have_content('0 votes')
   end  
 

@@ -3,7 +3,9 @@
     <div class="col-md-12">
       <h3><%= post.title %></h3>
       <%= post.comment %>
-      <%=link_to 'Upvote', '#'%>
+      <%=button_to 'Upvote', post_votes_path(post, direction: :up)%>
+      <%=button_to 'Downvote', post_votes_path(post, direction: :down)%>
+      <h6><%= pluralize post.vote_count, 'vote' %> </h6>
     </div>
   <% end %>
 <% else %>
