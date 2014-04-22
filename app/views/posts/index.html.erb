@@ -1,7 +1,9 @@
 <% if @posts.any? %>
-  <% @posts.comment.each do |comment| %>
-    <%= comment %>
+  <% @posts.each do |post| %>
+    <%= post.comment %>
   <% end %>
 <% else %>
-  no posts yet
+  No posts yet
 <% end %>
+
+<%= link_to 'Add Post', new_post_path %>
