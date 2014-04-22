@@ -25,5 +25,6 @@ Project to create a ruby on rails application including:
 * Rspec - tests
 * Factory Girl - tests
 * Timecop - tests
+* Capybara Mailer - tests
 * Launchy
 * Bootstrap SCSS

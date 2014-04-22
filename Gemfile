@@ -33,16 +33,17 @@ group :doc do
 end
 
 group :test, :development do
-
   gem 'capybara'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'timecop'
-
+  gem 'capybara-email'
 end
 
 gem 'bootstrap-sass'
+
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

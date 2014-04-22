@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'post index page' do
-  
   context 'no posts' do
     it 'shows a message' do
       visit '/posts'
@@ -9,19 +8,19 @@ describe 'post index page' do
     end
   end
 
-  context 'valid posts' do
 
+  context 'valid posts' do
+    let!(:test) { create(:test)}
     before(:each) do
-      create(:post)
+      create(:post, user: test)
+      login_as create(:tester)
     end
 
     it 'displays comments' do
       visit '/posts'
       expect(page).to have_content('some comment')
     end
-  end
 
-  describe 'adding a post' do
     it 'displays a new post' do
       visit '/posts'
       click_link('Add Post')
@@ -31,5 +30,4 @@ describe 'post index page' do
       expect(page).to have_content('some new comment')
     end
   end
-
 end

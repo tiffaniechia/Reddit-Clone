@@ -2,7 +2,9 @@ class VotesController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @post.votes.create direction: params[:direction]
+    @votes = @post.votes.new direction: params[:direction]
+    @votes.user = current_user
+    @votes.save
     redirect_to '/posts'
   end
 
