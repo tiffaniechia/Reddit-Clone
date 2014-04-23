@@ -7,12 +7,20 @@ $(document).ready ->
   $('.vote-buttons .btn').on 'click', (event) ->
     event.preventDefault()
     url = $(this).closest('form').attr('action')
-    voteCount = $(this).closest('.post').find('.votes-text')
 
-    $.post url, (post) ->
+    $.post url
 
-      voteCount.html "#{post.vote_count} votes"
+  dispatcher = new WebSocketRails(window.location.host + '/websocket')
 
+  channel = dispatcher.subscribe 'votes' 
+
+  channel.bind 'new', (post) ->
+    if post.new_vote_count == 1
+      suffix = ' vote'
+    else
+      suffix = ' votes'
+
+    $(".votes-text[data-id=#{post.id}]").html(post.new_vote_count + suffix)
 
 
 
@@ -28,4 +36,4 @@ $(document).ready ->
 #     });
 # 
 #   });
-# });
+#  
