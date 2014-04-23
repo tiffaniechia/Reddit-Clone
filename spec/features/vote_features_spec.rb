@@ -14,14 +14,14 @@ end
   end  
 
 
-  it 'upvote' do 
+  it 'upvote', js: true do 
     visit'/posts'
     click_button 'Upvote'
     expect(page).to have_content('1 vote')
   end  
 
 
-  it 'downvote' do 
+  it 'downvote', js: true do 
     visit'/posts'
     click_button'Upvote'
     expect(page).to have_content('1 vote')

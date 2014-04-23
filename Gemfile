@@ -40,11 +40,15 @@ group :test, :development do
   gem 'timecop'
   gem 'capybara-email'
   gem 'mailcatcher'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 gem 'bootstrap-sass'
 
 gem 'devise'
+
+gem 'websocket-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

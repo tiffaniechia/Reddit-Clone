@@ -21,11 +21,19 @@ Project to create a ruby on rails application including:
 
 * Ruby
 * Ruby on Rails
-* Capybara - tests
-* Rspec - tests
-* Factory Girl - tests
-* Timecop - tests
-* Capybara Mailer - tests
+* Javascript
+* JSON
+* Coffeescript
 * Launchy
 * Bootstrap SCSS
+* Websocket Rails
+
+For Testing:
+* Capybara
+* Rspec
+* Factory Girl
+* Timecop
+* Capybara Mailer
 * Mailcatcher
+* Poltergeist
+* Database Cleaner
