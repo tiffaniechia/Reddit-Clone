@@ -8,14 +8,16 @@ The vote calculation on this app is made to be time-sensitive such that only vot
 An added feature was a mailboxer functionality whereby users get an email notification whenever their posts have a change in votes.
 
 
-This task was set by [Alex Peattie](https://github.com/alexpeattie)
+This task was set by [Alex Peattie](https://github.com/alexpeattie).
+
+(Week 10)
 
 ##
 
 ### Home page with posts and votes
 ![screenshot](app/assets/images/reddit_home.png)
 
-##Stack:
+##Technologies Used
 
 - Ruby
 - Ruby on Rails
@@ -39,7 +41,7 @@ For Testing:
 
 
 
-##Contributers:
+##Collaborators
 
 - [Tiffanie Chia](https://github.com/tiffaniechia)
 - [Andrew Cumine](https://github.com/ajcumine)
